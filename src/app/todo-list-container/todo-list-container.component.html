@@ -1,0 +1,6 @@
+<div class="list-container" fxLayout="row wrap" fxLayoutAlign="start center">
+  <app-todo-list-wrap *ngFor="let i of lists" [listId]="i" (removeList)="removeList(i)"></app-todo-list-wrap>
+  <button mat-fab (click)="addList()">
+    <mat-icon>add</mat-icon>
+  </button>
+</div>

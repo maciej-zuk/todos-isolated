@@ -1,0 +1,12 @@
+<div class="todo" fxLayoutAlign="space-between center">
+  <p fxFlex="100" [class.done]="todo.done">{{todo.text}}</p>
+  <button mat-icon-button (click)="markDone()" *ngIf="!todo.done">
+    <mat-icon>done</mat-icon>
+  </button>
+  <button mat-icon-button (click)="markUndone()" *ngIf="todo.done">
+    <mat-icon>undo</mat-icon>
+  </button>
+  <button mat-icon-button (click)="removeTodo()" *ngIf="todo.done">
+    <mat-icon>delete</mat-icon>
+  </button>
+</div>
